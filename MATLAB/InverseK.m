@@ -1,3 +1,4 @@
+%Function used to evaluate the joint angles using the cartesian coordinates in Trajectory Plotting
 
 function coord = InverseK(leg,L1,L2,L3,x,y,z)
          X = -x;
