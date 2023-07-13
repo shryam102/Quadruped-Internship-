@@ -206,7 +206,9 @@ for i = 1:length(Z_ef_LF)
     Y_RH = [P0_RH(:,2) P1_RH(:,2)];
     Z_RH = [P0_RH(:,3) P1_RH(:,3)];
     plot3(X_RH',Y_RH',Z_RH','r',LineWidth= 3)
-    grid on
+    xlabel('X axis') 
+    ylabel('Y axis')
+    zlabel('Z axis')
     plot3(X_ef_RH(1:i),Y_ef_RH(1:i), Z_ef_RH(1:i),'k',LineWidth=1)
     view(165,30)
     axis([-(L/2+Stride_length) (L/2+Stride_length)  -(W/2+Stride_length) (W/2+Stride_length) -(L1 +L2 +L3 +10) 20])
@@ -241,36 +243,12 @@ for i = 1:length(Z_ef_LH)
     plot3(Xb',Yb',Zb','b',LineWidth=3)
     hold on
     %-------------------------Leg(RH)------------------------------
-%     Angle_Rf = InverseK("RF",L1,L2,L3,Stride_length/2,0,-Height_ground);
-%     Rf0 = [L/2,-W/2, 0;
-%            L/2, -W/2+L1*sin(Angle_Rf(1)), -L1*cos(Angle_Rf(1));
-%            L/2+L2*sin(Angle_Rf(2)), -W/2+L1*sin(Angle_Rf(1))+L2*cos(Angle_Rf(2))*sin(Angle_Rf(1)), -L1*cos(Angle_Rf(1))-L2*cos(Angle_Rf(1))*cos(Angle_Rf(2));];
-% 
-%     Rf1 = [L/2, -W/2+L1*sin(Angle_Rf(1)), -L1*cos(Angle_Rf(1));
-%            L/2+L2*sin(Angle_Rf(2)), -W/2+L1*sin(Angle_Rf(1))+L2*cos(Angle_Rf(2))*sin(Angle_Rf(1)), -L1*cos(Angle_Rf(1))-L2*cos(Angle_Rf(1))*cos(Angle_Rf(2));
-%            L/2+L2*sin(Angle_Rf(2))+L3*sin(Angle_Rf(2)+Angle_Rf(3)), -W/2+sin(Angle_Rf(1))*(L1 + L2*cos(Angle_Rf(2)) + L3*cos(Angle_Rf(2) + Angle_Rf(3))), -cos(Angle_Rf(1))*(L1 + L2*cos(Angle_Rf(2)) + L3*cos(Angle_Rf(2) + Angle_Rf(3)))];
-
-%     X_RF = round([Rf0(:,1) Rf1(:,1)],5);
-%     Y_RF = round([Rf0(:,2) Rf1(:,2)],5);
-%     Z_RF = round([Rf0(:,3) Rf1(:,3)],5);
-
+   
     plot3(X_RH',Y_RH',Z_RH','r',LineWidth=3) 
     hold on
 
     %------------------------------Leg(LF)---------------------------------
 
-%     Angle_Lh = InverseK("LH",L1,L2,L3,-Stride_length/2,0,-Height_ground);
-%     Lh0 = [-L/2,W/2, 0;
-%            -L/2, W/2+L1*sin(Angle_Lh(1)), -L1*cos(Angle_Lh(1));
-%            -L/2-L2*sin(Angle_Lh(2)), W/2+L1*sin(Angle_Lh(1))+L2*cos(Angle_Lh(2))*sin(Angle_Lh(1)), -L1*cos(Angle_Lh(1))-L2*cos(Angle_Lh(1))*cos(Angle_Lh(2));];
-% 
-%     Lh1 = [-L/2, W/2+L1*sin(Angle_Lh(1)), -L1*cos(Angle_Lh(1));
-%            -L/2-L2*sin(Angle_Lh(2)), W/2+L1*sin(Angle_Lh(1))+L2*cos(Angle_Lh(2))*sin(Angle_Lh(1)), -L1*cos(Angle_Lh(1))-L2*cos(Angle_Lh(1))*cos(Angle_Lh(2));
-%            -L/2-L2*sin(Angle_Lh(2))-L3*sin(Angle_Lh(2)+Angle_Lh(3)), W/2+sin(Angle_Lh(1))*(L1 + L2*cos(Angle_Lh(2)) + L3*cos(Angle_Lh(2) + Angle_Lh(3))), -cos(Angle_Lh(1))*(L1 + L2*cos(Angle_Lh(2)) + L3*cos(Angle_Lh(2) + Angle_Lh(3)));];
-
-%     X_LH = round([Lh0(:,1) Lh1(:,1)],5);
-%     Y_LH = round([Lh0(:,2) Lh1(:,2)],5);
-%     Z_LH = round([Lh0(:,3) Lh1(:,3)],5);
 
     plot3(X_LF',Y_LF',Z_LF','r',LineWidth=3) 
     hold on
@@ -304,7 +282,9 @@ for i = 1:length(Z_ef_LH)
     Y_RF = [P0_RF(:,2) P1_RF(:,2)];
     Z_RF = [P0_RF(:,3) P1_RF(:,3)];
     plot3(X_RF',Y_RF',Z_RF','c',LineWidth= 3)
-    grid on
+    xlabel('X axis') 
+    ylabel('Y axis')
+    zlabel('Z axis')
     plot3(X_ef_RF(1:i),Y_ef_RF(1:i), Z_ef_RF(1:i),'k',LineWidth=1)
     view(165,30)
     axis([-(L/2+Stride_length) (L/2+Stride_length)  -(W/2+Stride_length) (W/2+Stride_length) -(L1 +L2 +L3 +10) 20])
