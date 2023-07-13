@@ -68,14 +68,17 @@ X2 = round([P0_2(:,1) P1_2(:,1)],5);
 Y2 = round([P0_2(:,2) P1_2(:,2)],5);
 Z2 = round([P0_2(:,3) P1_2(:,3)],5);
 
-plot3(X1',Y1',Z1','K',LineWidth=3) 
+plot3(X1',Y1',Z1','b',LineWidth=3) 
 hold on
 plot3(X2',Y2',Z2','r',LineWidth=3) 
 grid on
-title('Visualization')
 xlabel('X axis') 
 ylabel('Y axis')
 zlabel('Z axis')
+title('Visualization')
+fprintf('\nBlue is the configuration_1 plot and Red is the configuration_2 plot')
+
+
 
 
 
